@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Link } from 'react-router-dom'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render () {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>Noteful</h1>
+        </header>
+
+        <main role="main">
+        <section aria-label="home-page" className="home-page">
+          {/* Route - exact path "/"
+          // displays folders and sidebar with notes */}
+        </section>
+        <section aria-label="folders-notes" className="folders-notes">
+          {/* Route - dynamic path "/note/:folder.id"
+          // displays folder list w/ only notes in selected folded (filtered) */}
+        </section>
+        <section aria-label="note-detail" className="note-detail">
+          {/* Route - dynamic path "/note/:note.id"
+          // displays only note with sidebar showing section w/ back button */}
+        </section>
+        </main>
+      </div>
+    );
+  }
 }
 
-export default App;
