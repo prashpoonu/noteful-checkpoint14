@@ -6,6 +6,9 @@ export default class SideBar extends Component {
     render () {
         return (
             <section aria-label="sidebar" className="sidebar">
+                <Route 
+                    path="/folder"
+                    component={Folder} />
                 <Folder />
                 <Folder />
                 <Folder />

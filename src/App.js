@@ -12,9 +12,10 @@ export default class App extends Component {
         </header>
 
         <main role="main">
-          <Main />
-            {/* Route - exact path "/"
-            // displays folders and sidebar with notes */}
+          {/* <Main /> */}
+          <Route 
+            exact path="/"
+            component={Main} />
         </main>
       </div>
     );
