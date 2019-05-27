@@ -7,8 +7,8 @@ export default class Main extends Component {
     render () {
         return (
             <>
-                <SideBar />
-                <NoteList />
+            <SideBar />
+            <NoteList />
             </>
         );
     }

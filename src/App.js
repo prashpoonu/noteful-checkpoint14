@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Noteful</h1>
+          <h1><Link to='/'>Noteful</Link></h1>
         </header>
 
         <main role="main">
@@ -16,6 +16,14 @@ export default class App extends Component {
           <Route 
             exact path="/"
             component={Main} />
+          
+          <Route
+            path="/folder" //folder.id
+            component={Folder} />
+
+          <Route
+            path="note" ///note.id
+            component={Note} />
         </main>
       </div>
     );
