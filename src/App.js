@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Main from './Main/Main';
 import './App.css';
+import Folder from './Folder/Folder';
+import Note from './Note/Note';
 
 export default class App extends Component {
   render () {
@@ -15,15 +17,21 @@ export default class App extends Component {
           {/* <Main /> */}
           <Route 
             exact path="/"
-            component={Main} />
+            render={() => 
+              <Main />}
+            />
           
           <Route
             path="/folder" //folder.id
-            component={Folder} />
+            render={() =>
+              <Folder />}
+            />
 
           <Route
-            path="note" ///note.id
-            component={Note} />
+            path="note" //note.id
+            render={() =>
+              <Note />}
+            />
         </main>
       </div>
     );
