@@ -1,3 +1,16 @@
-.App {
-  text-align: center;
+
+.main {
+  display: flex;
+}
+
+.sidebar {
+  background-color: cornflowerblue;
+  padding: 0 10px;
+  min-width: 50px;
+}
+
+.notelist {
+  background-color: lightslategray;
+  padding: 0 10px;
+  min-width: 150px;
 }

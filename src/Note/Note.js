@@ -4,10 +4,12 @@ export default class Note extends Component {
     render() {
         return (
             <>
-                <h2 className="note">Note Title</h2>
-                <p>Note content stuff goes here</p>
+                <h2 className="note">{this.props.name}</h2>
+                <p>Date Modified: {this.props.modified}</p>  {/* format date here */}
+
+                {/* <p>Content Details (if clicked)</p> */}
                 <button>Delete Note</button>
-                <p>Content Details (if clicked)</p>
+                <hr />
             </>
         );
     }
