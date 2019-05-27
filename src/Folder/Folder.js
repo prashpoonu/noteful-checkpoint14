@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default function Folder() {
-    return (
-        <h2 className="folder">
-           Folder Name
-        </h2>
-    );
+export default class Folder extends Component {
+    render() {
+        return (
+            <h2 className="folder">
+               Folder Name
+            </h2>
+        );
+    }
 }

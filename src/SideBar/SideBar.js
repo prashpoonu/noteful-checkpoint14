@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Folder from '../Folder/Folder';
-import { Route, Link } from 'react-router-dom';
+import AddFolder from '../AddFolder/AddFolder';
 
 export default class SideBar extends Component {
     render () {
@@ -9,6 +9,7 @@ export default class SideBar extends Component {
                 <Folder />
                 <Folder />
                 <Folder />
+                <AddFolder />
             </section>
         );
     }

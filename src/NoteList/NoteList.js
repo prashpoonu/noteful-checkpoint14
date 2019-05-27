@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Note from '../Note/Note';
-import { Route, Link } from 'react-router-dom';
+import AddNote from '../AddNote/AddNote';
 
 export default class NoteList extends Component {
     render () {
@@ -9,6 +9,7 @@ export default class NoteList extends Component {
                 <Note />
                 <Note />
                 <Note />
+                <AddNote />
             </section>
         )
     }

@@ -13,7 +13,6 @@ export default class App extends Component {
           <h1><Link to='/'>Noteful</Link></h1>
         </header>
 
-        <main role="main">
           {/* <Main /> */}
           <Route 
             exact path="/"
@@ -32,7 +31,6 @@ export default class App extends Component {
             render={() =>
               <Note />}
             />
-        </main>
       </div>
     );
   }
