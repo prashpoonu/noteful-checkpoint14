@@ -7,10 +7,11 @@ import DATA from '../dummystore';
 
 export default class NoteListFiltered extends Component {
     render () {
-        const folder = DATA.folders.find(folder => folder.id === this.props.match.params.folderId); 
+        const folder = DATA.folders.find(folder => 
+            folder.id === this.props.match.params.folderId); 
             //Important part )
 
-        let notes = DATA.notes.map(note => {            // this is what's in the URL
+        let notes = DATA.notes.map(note => {      // this is what's in the URL
             if (folder.id === note.folderId) {
                 return <Note {...note} />
             }
