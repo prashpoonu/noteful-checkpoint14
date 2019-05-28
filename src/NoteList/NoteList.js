@@ -8,7 +8,7 @@ import DATA from '../dummystore';
 export default class NoteList extends Component {
     render () {
         let notes = DATA.notes.map(note => 
-            <Note {...note} />
+            <Note key={note.id} {...note} />
         );
 
         return (

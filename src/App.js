@@ -3,12 +3,16 @@ import { Route, Link } from 'react-router-dom';
 import Main from './Main/Main';
 import './App.css';
 import SideBar from './SideBar/SideBar';
-import NoteList from './NoteList/NoteList';
+import SideBarBack from './SideBar/SideBarBack';
 import NoteListFiltered from './NoteList/NoteListFiltered';
-import Folder from './Folder/Folder';
-import Note from './Note/Note';
+import NoteDetail from './Note/NoteDetail';
 
 export default class App extends Component {
+  state = {
+    folders: [],
+    notes: []
+  }
+
   render () {
     return (
       <div className="App">
@@ -25,21 +29,26 @@ export default class App extends Component {
 
           
           <Route  // what goes in the address bar
-            path="/folder/:folderId"  //that colon is some variable that's passed in
+            path="/folders/:folderId"  //that colon is some variable that's passed in
             component={SideBar}
             />
-          
           <Route
-            path="/folder/:folderId" //folder.id
+            path="/folders/:folderId" //folder.id
             component={NoteListFiltered}
             />
 
 
-          <Route
-            path="note" //note.id
-            render={() =>
-              <Note />}
+          <Route 
+            path="/notes/:noteId"
+            component={SideBarBack}
+            // component needs to be the sidebar with the back button
             />
+          
+          <Route
+            path="/notes/:noteId"
+            component={NoteDetail}
+            // component needs to be note content
+          />
         </main>
       </div>
     );

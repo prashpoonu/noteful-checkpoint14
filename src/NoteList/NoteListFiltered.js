@@ -13,8 +13,9 @@ export default class NoteListFiltered extends Component {
 
         let notes = DATA.notes.map(note => {      // this is what's in the URL
             if (folder.id === note.folderId) {
-                return <Note {...note} />
+                return <Note key={note.id} {...note} />
             }
+            return null;
         });
 
         return (

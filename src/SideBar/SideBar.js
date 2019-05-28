@@ -7,7 +7,7 @@ import DATA from '../dummystore';
 export default class SideBar extends Component {
     render () {
         let folders = DATA.folders.map(folder => 
-            <Link to={`/folder/${folder.id}`}>
+            <Link key={folder.id} to={`/folders/${folder.id}`}>
                 <Folder name={folder.name} id={folder.id} />
             </Link>
         );
